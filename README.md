@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an image repository built in Ruby on Rails for Shopify's Backend Developer Intern Challenge Question.
 
-Things you may want to cover:
+The job app is https://www.shopify.com/careers/developer-internships-data-science-internships-winter-2021-826aeb
 
-* Ruby version
+The challenge info is: https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please hire me.
