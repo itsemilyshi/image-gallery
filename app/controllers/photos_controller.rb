@@ -25,7 +25,6 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
-    byebug
 
     @photo.user = current_user
 
@@ -72,6 +71,6 @@ class PhotosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def photo_params
-      params.require(:photo).permit(:image, :user)
+      params.require(:photo).permit(:image, :user, :description)
     end
 end

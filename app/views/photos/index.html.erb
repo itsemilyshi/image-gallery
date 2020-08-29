@@ -11,6 +11,7 @@
 
   <tbody>
     <% @photos.each do |photo| %>
+      <%=photo.description%>
       <tr>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
