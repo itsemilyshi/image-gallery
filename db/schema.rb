@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_29_010833) do
+ActiveRecord::Schema.define(version: 2020_08_29_165254) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 2020_08_29_010833) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.string "description"
+    t.decimal "price", precision: 8, scale: 2
+    t.integer "discount"
+    t.boolean "private", default: true
+    t.string "tags"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
