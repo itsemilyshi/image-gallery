@@ -1,6 +1,6 @@
 class Cart < ApplicationRecord
     belongs_to :user
-    has_many :photos
+    has_and_belongs_to_many :photos
 
     def cost
         price = 0

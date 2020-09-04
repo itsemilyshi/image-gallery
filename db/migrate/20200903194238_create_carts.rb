@@ -6,5 +6,9 @@ class CreateCarts < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    create_table :carts_photos do |t|
+      t.belongs_to :photo
+      t.belongs_to :cart
+    end
   end
 end
