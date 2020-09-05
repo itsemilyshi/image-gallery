@@ -14,17 +14,17 @@ User: Devise generated for log in, log out
   - has many: images
 
 Photo:
-  - belongs to user
-  - has many images attached
-  - boolean for public/private
-  - description
+  - belongs to user -- have
+  - has many images attached -- have
+  - boolean for public/private -- have
+  - description -- have
   - array of tags/key words for searching similar images
   - CUD can only be accessed by the user who the photo belongs to
   - R can be accessed by the user it belongs to, and other users if bool public == true
 
 Image:
-  - active storage item
-  - just kind of attached to Photo
+  - active storage item -- have
+  - just kind of attached to Photo -- have
   - connect to Cloudinary in the future so I don't have to store this on my local machine because that's dumb for prod
 
 For bulk upload:
@@ -44,9 +44,9 @@ Search:
   - search for similar images: how??? maybe just use https://github.com/asmuth/recommendify whichs gets visitor similarity
 
 Buy/Sell:
-  - User has money numerical value attached
-  - Photo has price value
-  - Click buy: current_user.money = current_user.money - photo.price
-  - Photo has discount value
-  - If discount: current_user.money = current_user.money - (photo.price - (photo.price * discount))
+  - User has money numerical value attached -- have
+  - Photo has price value -- have
+  - Click buy: current_user.money = current_user.money - photo.price -- have
+  - Photo has discount value -- have
+  - If discount: current_user.money = current_user.money - (photo.price - (photo.price * discount)) -- have
   - Inventory management???? How does this work in real life? Will have to research this a bit more
