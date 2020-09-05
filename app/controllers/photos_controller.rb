@@ -4,21 +4,25 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
+    @current_user = current_user
     @photos = Photo.all
   end
 
   # GET /photos/1
   # GET /photos/1.json
   def show
+    @current_user = current_user
   end
 
   # GET /photos/new
   def new
+    @current_user = current_user
     @photo = Photo.new
   end
 
   # GET /photos/1/edit
   def edit
+    @current_user = current_user
   end
 
   # POST /photos
