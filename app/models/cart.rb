@@ -7,7 +7,6 @@ class Cart < ApplicationRecord
         self.photos.each do |photo|
             price = price + (photo.price * (100 / 100))
         end
-        byebug
         return price
     end
 end

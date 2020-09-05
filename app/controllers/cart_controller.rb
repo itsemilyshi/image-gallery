@@ -28,10 +28,8 @@ class CartController < ApplicationController
     end
 
     def checkout 
-        byebug
         current_user.money = current_user.money - @cart.cost
         current_user.save!
-        byebug
         respond_to do |format|
             format.html {redirect_to @cart}
         end
