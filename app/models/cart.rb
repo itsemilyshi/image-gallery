@@ -4,9 +4,10 @@ class Cart < ApplicationRecord
 
     def cost
         price = 0
-        cart.photos.each do |photo|
-            price = price + (photo.price * (photo.discount / 100))
+        self.photos.each do |photo|
+            price = price + (photo.price * (100 / 100))
         end
-        return cost
+        byebug
+        return price
     end
 end

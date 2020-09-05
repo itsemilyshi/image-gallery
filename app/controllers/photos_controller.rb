@@ -30,6 +30,10 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
 
+    if @photo.discount.empty?
+      @photo.discount == 0
+    end
+
     @photo.user = current_user
 
     respond_to do |format|
@@ -75,6 +79,6 @@ class PhotosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def photo_params
-      params.require(:photo).permit(:image, :user, :description)
+      params.require(:photo).permit(:image, :user, :description, :price)
     end
 end
