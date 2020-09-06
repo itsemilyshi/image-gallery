@@ -5,7 +5,9 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @current_user = current_user
-    @photos = Photo.all
+    @photos = Photo.where(private: false)
+    own_photos = Photo.where(private: true, user_id: current_user.id)
+    @photos = @photos + own_photos
   end
 
   # GET /photos/1
