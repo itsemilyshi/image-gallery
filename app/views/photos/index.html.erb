@@ -19,8 +19,10 @@
           <p class="card-text"><%=photo.description%></p>
           <%= check_box_tag "photos[]", photo.id%>
             <%= link_to 'Show', photo, class: "btn btn-primary" %>
-            <%= link_to 'Edit', edit_photo_path(photo), class: "btn btn-secondary" %>
-            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%>
+            <%if @current_user.id == photo.user_id%>
+              <%= link_to 'Edit', edit_photo_path(photo), class: "btn btn-secondary" %>
+              <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%>
+            <%end%>
             <%= link_to 'Add to Cart', add_to_cart_path(photo.id), class: "btn btn-info" %>
         </div>
       </div>
