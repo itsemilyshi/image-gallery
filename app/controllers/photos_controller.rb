@@ -33,7 +33,11 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
 
     if @photo.discount == nil
-      @photo.discount == 0
+      @photo.discount = 0
+    end
+
+    if @photo.price == nil
+      @photo.price = 0
     end
 
     @photo.user = current_user

@@ -1,14 +1,18 @@
 <%= render "nav/navbar" %>
+<div class="container">
 
-<p id="notice"><%= notice %></p>
-<%if @photo.image.attached? %>
-  <%= image_tag(@photo.image, :size => "260x180")%>
-  <%= @photo.description%>
-  <%=@photo.price%>
-  <%=@photo.discount%>
-  <%if @photo.private%>
-  Private
-  <%end%>
-<%end%>
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+
+<div class="card">
+  <%= image_tag(@photo.image, :size => "700x500")%>
+  <div class="card-body">
+    <h5 class="card-title">$<%=@photo.price%>
+    <%if @photo.discount != 0%>
+      <b><%=@photo.discount%>% off</b>
+    <%end%>
+    </h5>
+    <p class="card-text"><%=@photo.description%></p>
+      <%= link_to 'Edit', edit_photo_path(@photo), class: "btn btn-secondary" %>
+      <%= link_to 'Destroy', @photo, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%>
+      <%= link_to 'Add to Cart', add_to_cart_path(@photo.id), class: "btn btn-info" %>
+  </div>
+</div>

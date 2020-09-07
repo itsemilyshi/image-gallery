@@ -15,7 +15,7 @@ class CartController < ApplicationController
         photo = Photo.find(params[:photo_id])
         @cart.photos << photo
         respond_to do |format|
-            format.html {redirect_to @cart}
+            format.html {redirect_to cart_index_path}
         end
     end
 
@@ -23,7 +23,7 @@ class CartController < ApplicationController
         photo = Photo.find(params[:photo_id])
         @cart.photos.delete(photo)
         respond_to do |format|
-            format.html {redirect_to @cart}
+            format.html {redirect_to cart_index_path}
         end
     end
 
@@ -31,7 +31,7 @@ class CartController < ApplicationController
         current_user.money = current_user.money - @cart.cost
         current_user.save!
         respond_to do |format|
-            format.html {redirect_to @cart}
+            format.html {redirect_to cart_index_path}
         end
     end
 
