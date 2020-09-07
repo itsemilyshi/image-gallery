@@ -2,6 +2,14 @@
 
 This is an image repository built in Ruby on Rails for Shopify's Backend Developer Intern Challenge Question.
 
+Currently has:
+- CRUD for images
+- user login/logout
+- images belong to users, user can set privacy of images, only image owner can UD
+- Bulk delete
+- Can add images to shopping cart, images have price and discount value
+- User can have money and money is deducted when the user checks out their cart
+
 The job app is https://www.shopify.com/careers/developer-internships-data-science-internships-winter-2021-826aeb
 
 The challenge info is: https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit
