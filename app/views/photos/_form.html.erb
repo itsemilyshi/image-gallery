@@ -14,8 +14,14 @@
   <div class="actions">
     <%= form.label "Image"%>
     <%= form.file_field :image%>
+    Description
     <%= form.text_field :description%>
+    Price
     <%= form.number_field :price, step: 0.01%>
+    Discount
+    <%= form.number_field :discount%>
+    Private?
+    <%= form.check_box :private%>
     <%= form.submit %>
   </div>
 <% end %>

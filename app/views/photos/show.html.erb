@@ -4,6 +4,11 @@
 <%if @photo.image.attached? %>
   <%= image_tag(@photo.image, :size => "260x180")%>
   <%= @photo.description%>
+  <%=@photo.price%>
+  <%=@photo.discount%>
+  <%if @photo.private%>
+  Private
+  <%end%>
 <%end%>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

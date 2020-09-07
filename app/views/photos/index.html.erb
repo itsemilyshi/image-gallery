@@ -14,7 +14,14 @@
   </thead>
   <tbody>
     <% @photos.each do |photo| %>
+      <%= image_tag(photo.image, :size => "260x180")%>
+      <b>Description:</b>
       <%=photo.description%>
+      <b>Price:</b>
+      <%=photo.price%>
+      <%if photo.discount %>
+            <b><%=photo.discount%>% off</b>
+      <%end%>
       <%= check_box_tag "photos[]", photo.id %><
       <tr>
         <td><%= link_to 'Show', photo %></td>
