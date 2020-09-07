@@ -32,7 +32,7 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
 
-    if @photo.discount.empty?
+    if @photo.discount == nil
       @photo.discount == 0
     end
 
@@ -69,6 +69,14 @@ class PhotosController < ApplicationController
     @photo.destroy
     respond_to do |format|
       format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  def bulk_destroy
+    Photo.destroy(params[:photos])
+    respond_to do |format|
+      format.html { redirect_to photos_path }
       format.json { head :no_content }
     end
   end

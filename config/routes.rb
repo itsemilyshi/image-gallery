@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :photos
+  resources :photos do
+    collection do
+      delete 'bulk_destroy'
+    end
+  end
   resources :cart
   devise_for :users
 
