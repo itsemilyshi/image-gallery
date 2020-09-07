@@ -34,9 +34,7 @@ For bulk upload:
   - Since photos and images are 1 to 1, can't really do a thing where you attach multiple images to one photo object, since they will have to be able to be deleted separately
 
 Bulk Delete:
-  - Destroy all function
-  - Have a 'Delete?' boolean for photo
-  - When destroy all is called, go through each photo that belongs to current_user and delete if delete == true
+  - Destroy all function -- have
 
 Search:
   - by text: find images by description
